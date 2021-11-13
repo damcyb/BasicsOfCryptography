@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="checker.BBSCheckerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-11-07T07:54:00" hostname="MBP-FliCom.wtvk.pl" time="0.2">
+  <properties/>
+  <testcase name="Test serii()" classname="checker.BBSCheckerTest" time="0.178"/>
+  <testcase name="Test pokerowy()" classname="checker.BBSCheckerTest" time="0.014"/>
+  <testcase name="Test pojedynczych bitów()" classname="checker.BBSCheckerTest" time="0.003"/>
+  <testcase name="Test dlugiej serii()" classname="checker.BBSCheckerTest" time="0.003"/>
+  <system-out><![CDATA[Liczba serii zer o długości 1 wynosi: 2613
+Liczba serii zer o długości 2 wynosi: 1143
+Liczba serii zer o długości 3 wynosi: 647
+Liczba serii zer o długości 4 wynosi: 314
+Liczba serii zer o długości 5 wynosi: 144
+Liczba serii zer o długości 6 wynosi: 159
+Liczba serii jedynek o długości 1 wynosi: 2459
+Liczba serii jedynek o długości 2 wynosi: 1269
+Liczba serii jedynek o długości 3 wynosi: 675
+Liczba serii jedynek o długości 4 wynosi: 318
+Liczba serii jedynek o długości 5 wynosi: 154
+Liczba serii jedynek o długości 6 wynosi: 144
+Wynik wynosi: 22.72320 <2.16; 46.17>
+Liczba jedynek wynosi: 10051 <9725.0; 10275.0>
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
