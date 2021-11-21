@@ -34,7 +34,7 @@ class CbcCipher(private val length: Int): GenericCipher {
             val decryptedBinaryBlock = ecbCipher.decryptWithIv(binaryString)
             val ivDecryptedBlock = decryptedBinaryBlock.xor(iv)
             iv = binaryString.fromBinaryStringToByteArray()
-            String(ivDecryptedBlock)
+            String(ivDecryptedBlock.removePaddingFromBlock())
         }.replace(", ", "")
     }
 }

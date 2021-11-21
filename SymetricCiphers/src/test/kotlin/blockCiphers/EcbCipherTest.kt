@@ -3,6 +3,7 @@ package blockCiphers
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.*
 import utils.*
+import java.math.BigInteger
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 internal class EcbCipherTest {
@@ -16,7 +17,6 @@ internal class EcbCipherTest {
     fun initSetup() {
         ecbCipher = EcbCipher(BLOCK_SIZE_IN_BITS)
         inputText = readFile("./src/main/resources/input/inputText.txt")
-
     }
 
     @Test
@@ -30,7 +30,7 @@ internal class EcbCipherTest {
 
     @Test
     fun `deleting whole block from encrypted message`() {
-        val encryptedInput = readFile("$regularProcessPath/ecbEncryptedText.txt")
+        val encryptedInput = ecbCipher.encrypt(inputText)
         val modifiedEncryptedText = encryptedInput.removeTargetBlock(0)
         val decryptedText = ecbCipher.decrypt(modifiedEncryptedText)
         writeToFile(decryptedText, "${modificationProcessPath}removedBlock.txt")
@@ -38,7 +38,7 @@ internal class EcbCipherTest {
 
     @Test
     fun `duplicating block in encrypted message`() {
-        val encryptedInput = readFile("$regularProcessPath/ecbEncryptedText.txt")
+        val encryptedInput = ecbCipher.encrypt(inputText)
         val modifiedEncryptedText = encryptedInput.duplicateTargetBlock(0)
         val decryptedText = ecbCipher.decrypt(modifiedEncryptedText)
         writeToFile(decryptedText, "${modificationProcessPath}duplicatedBlock.txt")
@@ -46,7 +46,7 @@ internal class EcbCipherTest {
 
     @Test
     fun `swapping blocks in encrypted message`() {
-        val encryptedInput = readFile("$regularProcessPath/ecbEncryptedText.txt")
+        val encryptedInput = ecbCipher.encrypt(inputText)
         val modifiedEncryptedText = encryptedInput.swapTargetBlocks(0, 1)
         val decryptedText = ecbCipher.decrypt(modifiedEncryptedText)
         writeToFile(decryptedText, "${modificationProcessPath}swappedBlocks.txt")
@@ -54,7 +54,7 @@ internal class EcbCipherTest {
 
     @Test
     fun `changing target bite in encrypted message`() {
-        val encryptedInput = readFile("$regularProcessPath/ecbEncryptedText.txt")
+        val encryptedInput = ecbCipher.encrypt(inputText)
         val modifiedEncryptedText = encryptedInput.changeBitValueInTargetBlock(3, 0)
         val decryptedText = ecbCipher.decrypt(modifiedEncryptedText)
         writeToFile(decryptedText, "${modificationProcessPath}changedBit.txt")
@@ -62,7 +62,7 @@ internal class EcbCipherTest {
 
     @Test
     fun `swapping target bits in encrypted message`() {
-        val encryptedInput = readFile("$regularProcessPath/ecbEncryptedText.txt")
+        val encryptedInput = ecbCipher.encrypt(inputText)
         val modifiedEncryptedText = encryptedInput.swapTargetBytes(1, 4, 0)
         val decryptedText = ecbCipher.decrypt(modifiedEncryptedText)
         writeToFile(decryptedText, "${modificationProcessPath}swappedBytes.txt")
@@ -70,7 +70,7 @@ internal class EcbCipherTest {
 
     @Test
     fun `deleting byte in block in encrypted message`() {
-        val encryptedInput = readFile("$regularProcessPath/ecbEncryptedText.txt")
+        val encryptedInput = ecbCipher.encrypt(inputText)
         val modifiedEncryptedText = encryptedInput.removeByteFromBlock(1, 0)
         val decryptedText = ecbCipher.decrypt(modifiedEncryptedText)
         writeToFile(decryptedText, "${modificationProcessPath}removedByte.txt")

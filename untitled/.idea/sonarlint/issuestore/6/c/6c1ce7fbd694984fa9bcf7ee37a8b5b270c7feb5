@@ -1,0 +1,19 @@
+
+h	java:S116	"LRename this field "P" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ùÔ8áÇ°ÏÒ/
+h	java:S116
+"LRename this field "Q" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Úş®8áÇ°ÏÒ/
+h	java:S116"LRename this field "N" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯´ú÷8áÇ°ÏÒ/
+j	java:S116"NRename this field "PHI" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡›¬8áÇ°ÏÒ/
+m	java:S116"LRename this field "R" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜«Ïıÿÿÿÿ8âÇ°ÏÒ/
+I
+java:S2201"'The return value of "add" must be used.(ìû’‡øÿÿÿÿ8ıÇ°ÏÒ/
+U	java:S106-"9Replace this use of System.out or System.err by a logger.(İ¨÷8…È°ÏÒ/
+M
+java:S1874."0Remove this use of "readLine"; it is deprecated.(ŸÙ—¤8‡È°ÏÒ/
+U	java:S106/"9Replace this use of System.out or System.err by a logger.(°à”›8ˆÈ°ÏÒ/
+Z	java:S1060"9Replace this use of System.out or System.err by a logger.(â©şÿÿÿÿ8‰È°ÏÒ/
+Z	java:S1066"9Replace this use of System.out or System.err by a logger.(°ÄÂúÿÿÿÿ8È°ÏÒ/
+Z	java:S1067"9Replace this use of System.out or System.err by a logger.(™õ›Åûÿÿÿÿ8È°ÏÒ/
+m	java:S117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½®Î©8¥È°ÏÒ/
+9
+java:S1643?"Use a StringBuilder instead.(¤·Ü‡8¦È°ÏÒ/

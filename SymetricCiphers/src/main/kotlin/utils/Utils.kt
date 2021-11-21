@@ -81,6 +81,20 @@ fun ByteArray.fulfillBlock(): ByteArray {
     return list.toByteArray()
 }
 
+fun ByteArray.removePaddingFromBlock(): ByteArray {
+    val elementsToRemove: Int = this.last().toInt()
+    val startIndex = this.size-1-elementsToRemove
+    if (startIndex >= 0 && elementsToRemove >= 0) {
+        for (i in this.size-elementsToRemove until this.size) {
+            if (this[i].toInt() != elementsToRemove) {
+                return this
+            }
+        }
+        return this.dropLast(elementsToRemove).toByteArray()
+    }
+    return this
+}
+
 fun String.divideIntoBlocks(blockSizeInBits: Int): List<ByteArray> =
     this.chunked(blockSizeInBits / BITS_IN_BYTE).map { it.toByteArray() }
 
@@ -103,4 +117,12 @@ fun String.validateAlphabet() {
     this.forEach {
         require(ALPHABET.contains(it, ignoreCase = true)) {"Text contains not allowed char $it"}
     }
+}
+
+fun List<ByteArray>.join(): ByteArray {
+    var accumulator: ByteArray = ByteArray(0)
+    this.forEach { element ->
+        accumulator = accumulator.plus(element)
+    }
+    return accumulator
 }

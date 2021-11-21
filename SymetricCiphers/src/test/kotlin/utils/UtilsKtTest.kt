@@ -1,7 +1,9 @@
 package utils
 
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import java.util.function.Predicate.isEqual
 
 internal class UtilsKtTest {
 
@@ -49,5 +51,13 @@ internal class UtilsKtTest {
         input.forEachIndexed { index, byte ->
             Assertions.assertEquals(byte, result[index])
         }
+    }
+
+    @Test
+    fun `should join byteArrays`() {
+        val byteOne: ByteArray = "test".toByteArray()
+        val byteTwo: ByteArray = "test".toByteArray()
+        val result = listOf(byteOne, byteTwo).join()
+        Assertions.assertEquals("testtest", String(result))
     }
 }

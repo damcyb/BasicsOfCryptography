@@ -33,7 +33,7 @@ class PbcCipher(private val length: Int): GenericCipher {
             val decryptedBinaryBlock = ecbCipher.decryptWithIv(binaryString)
             val ivDecryptedBlock = decryptedBinaryBlock.xor(iv)
             iv = ivDecryptedBlock
-            String(ivDecryptedBlock)
+            String(ivDecryptedBlock.removePaddingFromBlock())
         }.replace(", ", "")
     }
 }
