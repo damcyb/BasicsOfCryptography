@@ -1,6 +1,8 @@
 package utils
 
 import java.io.File
+import java.security.KeyPair
+import java.security.KeyPairGenerator
 import java.security.SecureRandom
 import javax.crypto.KeyGenerator
 import javax.crypto.SecretKey
@@ -17,6 +19,18 @@ fun generateIv(blockLength: Int): IvParameterSpec {
 
 fun generateAesKey(length: Int): SecretKey {
     val keyGenerator = KeyGenerator.getInstance("AES")
+    keyGenerator.init(length)
+    return keyGenerator.generateKey()
+}
+
+fun generateRsaKey(length: Int): KeyPair {
+    val keyGenerator = KeyPairGenerator.getInstance("RSA")
+    keyGenerator.initialize(length)
+    return keyGenerator.generateKeyPair()
+}
+
+fun generateDesKey(length: Int): SecretKey {
+    val keyGenerator = KeyGenerator.getInstance("DES")
     keyGenerator.init(length)
     return keyGenerator.generateKey()
 }

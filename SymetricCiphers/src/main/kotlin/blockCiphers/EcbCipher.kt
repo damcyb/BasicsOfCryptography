@@ -26,13 +26,6 @@ class EcbCipher(private val length: Int): GenericCipher {
         return cipherText.toBinaryString()
     }
 
-    fun encrypt(input: ByteArray): String {
-        val cipher: Cipher = Cipher.getInstance("AES/ECB/NoPadding")
-        cipher.init(Cipher.ENCRYPT_MODE, secretKey)
-        val cipherText: ByteArray = cipher.doFinal(input)
-        return cipherText.toBinaryString()
-    }
-
     override fun decrypt(encryptedText: String): String {
         val cipher = Cipher.getInstance("AES/ECB/NoPadding")
         cipher.init(Cipher.DECRYPT_MODE, secretKey)
@@ -42,10 +35,13 @@ class EcbCipher(private val length: Int): GenericCipher {
             String(decryptedByteArray.removePaddingFromBlock())
         }.joinToString { it }
             .replace(", ", "")
-//        val decryptedByteArray: ByteArray = cipher.doFinal(encryptedText.fromBinaryStringToByteArray())
-//        val decryptedText = String(decryptedByteArray)
-////        decryptedText.validateAlphabet()
-//        return decryptedText
+    }
+
+    fun encrypt(input: ByteArray): String {
+        val cipher: Cipher = Cipher.getInstance("AES/ECB/NoPadding")
+        cipher.init(Cipher.ENCRYPT_MODE, secretKey)
+        val cipherText: ByteArray = cipher.doFinal(input)
+        return cipherText.toBinaryString()
     }
 
     fun decryptWithIv(encryptedText: String): ByteArray {

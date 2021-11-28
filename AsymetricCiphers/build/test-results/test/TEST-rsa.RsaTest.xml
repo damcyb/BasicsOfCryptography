@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rsa.RsaTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-11-21T11:17:05" hostname="MBP-FliCom" time="0.105">
+<testsuite name="rsa.RsaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-28T13:07:25" hostname="MBP-FliCom.wtvk.pl" time="0.037">
   <properties/>
-  <testcase name="signVerifyTest()" classname="rsa.RsaTest" time="0.03"/>
-  <testcase name="encryption and decryption text should return same string()" classname="rsa.RsaTest" time="0.01"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="signVerifyTest()" classname="rsa.RsaTest" time="0.037"/>
+  <system-out><![CDATA[p = 3727, q = 3943
+fi = 14687892
+Private key: e = 91127, n = 14695561
+Public key: d = 9327191, n = 14695561
+Input  message: Arytmetyka modularna
+Output message: Arytmetyka modularna
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

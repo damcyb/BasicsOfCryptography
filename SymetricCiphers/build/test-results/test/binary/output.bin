@@ -1,0 +1,52 @@
+6Current mode: AES/ECB/PKCS5Padding, file length 119: 
+%Encryption time: 2479737 nanoseconds
+$Decryption time: 184966 nanoseconds
+---------------------------
+7Current mode: AES/ECB/PKCS5Padding, file length 5118: 
+%Encryption time: 1576548 nanoseconds
+$Decryption time: 712662 nanoseconds
+---------------------------
+8Current mode: AES/ECB/PKCS5Padding, file length 15356: 
+%Encryption time: 1206138 nanoseconds
+%Decryption time: 1866808 nanoseconds
+---------------------------
+6Current mode: AES/CBC/PKCS5Padding, file length 119: 
+$Encryption time: 352926 nanoseconds
+$Decryption time: 238382 nanoseconds
+---------------------------
+7Current mode: AES/CBC/PKCS5Padding, file length 5118: 
+$Encryption time: 770659 nanoseconds
+$Decryption time: 844499 nanoseconds
+---------------------------
+8Current mode: AES/CBC/PKCS5Padding, file length 15356: 
+%Encryption time: 2217660 nanoseconds
+%Decryption time: 2253948 nanoseconds
+---------------------------
+6Current mode: DES/ECB/PKCS5Padding, file length 119: 
+%Encryption time: 1013781 nanoseconds
+$Decryption time: 187904 nanoseconds
+---------------------------
+7Current mode: DES/ECB/PKCS5Padding, file length 5118: 
+%Encryption time: 1814389 nanoseconds
+$Decryption time: 945748 nanoseconds
+---------------------------
+8Current mode: DES/ECB/PKCS5Padding, file length 15356: 
+%Encryption time: 1117051 nanoseconds
+%Decryption time: 1245320 nanoseconds
+---------------------------
+6Current mode: DES/CBC/PKCS5Padding, file length 119: 
+$Encryption time: 211904 nanoseconds
+$Decryption time: 221035 nanoseconds
+---------------------------
+7Current mode: DES/CBC/PKCS5Padding, file length 5118: 
+%Encryption time: 1077641 nanoseconds
+$Decryption time: 807380 nanoseconds
+---------------------------
+8Current mode: DES/CBC/PKCS5Padding, file length 15356: 
+%Encryption time: 2162282 nanoseconds
+%Decryption time: 1379908 nanoseconds
+---------------------------
+3Current mode: RSA/ECB/NoPadding, file length 119: 
+%Encryption time: 1471976 nanoseconds
+%Decryption time: 2980615 nanoseconds
+---------------------------

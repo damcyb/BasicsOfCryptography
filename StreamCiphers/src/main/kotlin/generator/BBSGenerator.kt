@@ -4,8 +4,7 @@ import squared
 import writeToFile
 import java.math.BigInteger
 
-class
-BBSGenerator(private val blumNumber: BigInteger, private val length: Int, random: BigInteger? = null) {
+class BBSGenerator(private val blumNumber: BigInteger, private val length: Int, random: BigInteger? = null) {
 
     private var randomNumber: BigInteger = random ?: generateRandomNumber()
 
@@ -17,10 +16,6 @@ BBSGenerator(private val blumNumber: BigInteger, private val length: Int, random
             result.append((x.mod(BigInteger("2"))))
         }
         return result.toString()
-    }
-
-    fun writeBBSToFile(content: String, fileName: String, filePath: String = "./") {
-        writeToFile(content, fileName, filePath)
     }
 
     private fun generateRandomNumber(): BigInteger {
@@ -39,8 +34,11 @@ BBSGenerator(private val blumNumber: BigInteger, private val length: Int, random
                 numbers.remove(randomNumber)
             }
         }
-
         throw IllegalArgumentException("Random number with GCD = 1 cannot be found")
+    }
+
+    fun writeBBSToFile(content: String, fileName: String, filePath: String = "./") {
+        writeToFile(content, fileName, filePath)
     }
 
     private fun findGreatestCommonDivisor(n1: Int, n2: Int): Int {

@@ -1,1 +1,1 @@
-Arytmetyka modularna pojawia się wszędzie tam, gdzie występuje powtarzalność i cykliczność; dotyczy ona samego mierzenia czasu i jako taka jest podstawą działania kalendarza (zob. dalej).
+Arytmetyka modularna pojawia sie wszedzie tam, gdzie wystepuje powtarzalnosc i cyklicznosc, dotyczy ona samego mierzenia czasu i jako taka jest podstawe dzialania kalendarza (zob. dalej).

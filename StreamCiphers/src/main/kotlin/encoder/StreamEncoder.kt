@@ -5,20 +5,6 @@ import xor
 
 class StreamEncoder(private val bbs: String) {
 
-//    fun encode(text: String): String {
-//        val textByteArray: ByteArray = text.toByteArray()
-//        val bbsByteArray: ByteArray = bbs.toByteArray()
-//        require(textByteArray.size <= bbsByteArray.size) {
-//            "Text byteArray cannot be longer than encoding key byteArray"
-//        }
-//        val encodedText: StringBuilder = StringBuilder()
-//        var encodedBit: Byte
-//        textByteArray.forEachIndexed { index, byte ->
-//            encodedBit = byte.xor(bbsByteArray[index])
-//            encodedText.append(encodedBit)
-//        }
-//        return encodedText.toString()
-//    }
     fun encode(text: String): String {
         val textBinaryString: String = text.toBinary()
 
@@ -31,7 +17,6 @@ class StreamEncoder(private val bbs: String) {
             encodedBit = char.xor(bbs[index])
             encodedText.append(encodedBit)
         }
-//        println(encodedText.length)
         return encodedText.toString()
     }
 

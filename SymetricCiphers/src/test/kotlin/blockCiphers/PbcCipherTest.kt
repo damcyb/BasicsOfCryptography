@@ -33,7 +33,7 @@ internal class PbcCipherTest {
     @Test
     fun `deleting whole block from encrypted message`() {
         val encryptedInput = pbcCipher.encrypt(inputText)
-        val modifiedEncryptedText = encryptedInput.removeTargetBlock(0)
+        val modifiedEncryptedText = encryptedInput.removeTargetBlock(1)
         val decryptedText = pbcCipher.decrypt(modifiedEncryptedText)
         writeToFile(decryptedText, "${modificationProcessPath}removedBlock.txt")
     }
@@ -41,7 +41,7 @@ internal class PbcCipherTest {
     @Test
     fun `duplicating block in encrypted message`() {
         val encryptedInput = pbcCipher.encrypt(inputText)
-        val modifiedEncryptedText = encryptedInput.duplicateTargetBlock(0)
+        val modifiedEncryptedText = encryptedInput.duplicateTargetBlock(1)
         val decryptedText = pbcCipher.decrypt(modifiedEncryptedText)
         writeToFile(decryptedText, "${modificationProcessPath}duplicatedBlock.txt")
     }
@@ -57,7 +57,7 @@ internal class PbcCipherTest {
     @Test
     fun `changing target bite in encrypted message`() {
         val encryptedInput = pbcCipher.encrypt(inputText)
-        val modifiedEncryptedText = encryptedInput.changeBitValueInTargetBlock(3, 0)
+        val modifiedEncryptedText = encryptedInput.changeBitValueInTargetBlock(3, 1)
         val decryptedText = pbcCipher.decrypt(modifiedEncryptedText)
         writeToFile(decryptedText, "${modificationProcessPath}changedBit.txt")
     }
@@ -65,7 +65,7 @@ internal class PbcCipherTest {
     @Test
     fun `swapping target bits in encrypted message`() {
         val encryptedInput = pbcCipher.encrypt(inputText)
-        val modifiedEncryptedText = encryptedInput.swapTargetBytes(1, 4, 0)
+        val modifiedEncryptedText = encryptedInput.swapTargetBytes(1, 4, 1)
         val decryptedText = pbcCipher.decrypt(modifiedEncryptedText)
         writeToFile(decryptedText, "${modificationProcessPath}swappedBytes.txt")
     }
@@ -73,7 +73,7 @@ internal class PbcCipherTest {
     @Test
     fun `deleting byte in block in encrypted message`() {
         val encryptedInput = pbcCipher.encrypt(inputText)
-        val modifiedEncryptedText = encryptedInput.removeByteFromBlock(1, 0)
+        val modifiedEncryptedText = encryptedInput.removeByteFromBlock(1, 1)
         val decryptedText = pbcCipher.decrypt(modifiedEncryptedText)
         writeToFile(decryptedText, "${modificationProcessPath}removedByte.txt")
     }

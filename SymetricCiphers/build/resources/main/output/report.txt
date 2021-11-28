@@ -1,0 +1,52 @@
+Current mode: AES/ECB/PKCS5Padding, file length 120:
+Encryption time: 2635480 nanoseconds
+Decryption time: 187864 nanoseconds
+---------------------------
+Current mode: AES/ECB/PKCS5Padding, file length 5118:
+Encryption time: 2232490 nanoseconds
+Decryption time: 714021 nanoseconds
+---------------------------
+Current mode: AES/ECB/PKCS5Padding, file length 15356:
+Encryption time: 1188887 nanoseconds
+Decryption time: 1946483 nanoseconds
+---------------------------
+Current mode: AES/CBC/PKCS5Padding, file length 120:
+Encryption time: 753877 nanoseconds
+Decryption time: 317334 nanoseconds
+---------------------------
+Current mode: AES/CBC/PKCS5Padding, file length 5118:
+Encryption time: 915454 nanoseconds
+Decryption time: 801992 nanoseconds
+---------------------------
+Current mode: AES/CBC/PKCS5Padding, file length 15356:
+Encryption time: 2277359 nanoseconds
+Decryption time: 2580859 nanoseconds
+---------------------------
+Current mode: DES/ECB/PKCS5Padding, file length 120:
+Encryption time: 962071 nanoseconds
+Decryption time: 199504 nanoseconds
+---------------------------
+Current mode: DES/ECB/PKCS5Padding, file length 5118:
+Encryption time: 2012622 nanoseconds
+Decryption time: 945346 nanoseconds
+---------------------------
+Current mode: DES/ECB/PKCS5Padding, file length 15356:
+Encryption time: 1590025 nanoseconds
+Decryption time: 1726067 nanoseconds
+---------------------------
+Current mode: DES/CBC/PKCS5Padding, file length 120:
+Encryption time: 274627 nanoseconds
+Decryption time: 427429 nanoseconds
+---------------------------
+Current mode: DES/CBC/PKCS5Padding, file length 5118:
+Encryption time: 903207 nanoseconds
+Decryption time: 738796 nanoseconds
+---------------------------
+Current mode: DES/CBC/PKCS5Padding, file length 15356:
+Encryption time: 1855726 nanoseconds
+Decryption time: 2139906 nanoseconds
+---------------------------
+Current mode: RSA/ECB/NoPadding, file length 120:
+Encryption time: 1615579 nanoseconds
+Decryption time: 5113676 nanoseconds
+---------------------------

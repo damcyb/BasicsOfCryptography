@@ -18,23 +18,44 @@ class Rsa(
         require((e.multiply(d)).mod(fi).equals(BigInteger.ONE)) {"$e and $d are not complementary. Fi: $fi"}
     }
 
-    fun encryptMessage(message: ByteArray): ByteArray {
-        return BigInteger(message)
-            .modPow(e, n)
-            .toByteArray()
+    fun sign(message: ByteArray): List<ByteArray> {
+        return message.map {
+            BigInteger(byteArrayOf(it))
+                .modPow(d, n)
+                .toByteArray()
+        }
     }
 
-    fun decryptMessage(message: ByteArray): ByteArray {
-        return BigInteger(message)
-            .modPow(d, n)
-            .toByteArray()
+    fun verify(message: List<ByteArray>): ByteArray {
+        return message.map {
+            BigInteger(it)
+                .modPow(e, n)
+                .toByteArray()
+                .toList()
+        }.flatten().toByteArray()
     }
 
-    fun sign(message: ByteArray): ByteArray {
-        return decryptMessage(message) // decrypting plain text is equal to signing it
+    fun encryptMessage(message: ByteArray): List<ByteArray> {
+        return message.map {
+            BigInteger(byteArrayOf(it))
+                .modPow(e, n)
+                .toByteArray()
+        }
     }
 
-    fun verify(message: ByteArray): ByteArray {
-        return encryptMessage(message)
+    fun decryptMessage(message: List<ByteArray>): ByteArray {
+        return message.map {
+            BigInteger(it)
+                .modPow(d, n)
+                .toByteArray()
+                .toList()
+        }.flatten().toByteArray()
+    }
+
+    fun printoutData() {
+        println("p = $p, q = $q")
+        println("fi = $fi")
+        println("Private key: e = $e, n = $n")
+        println("Public key: d = $d, n = $n")
     }
 }

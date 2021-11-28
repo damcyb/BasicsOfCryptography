@@ -12,7 +12,8 @@ import java.math.BigDecimal
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 internal class BBSCheckerTest {
 
-    private val path: String = "./testSJ/encryptionKey1.txt"
+//    private val path: String = "./testSJ/encryptionKey1.txt"
+    private val path: String = "./encodedText.txt"
     private lateinit var bbs: String
     private lateinit var bbsAnalyzer: BBSAnalyzer
     private lateinit var bbsChecker: BBSChecker

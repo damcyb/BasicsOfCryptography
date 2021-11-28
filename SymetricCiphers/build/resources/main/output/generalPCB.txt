@@ -1,0 +1,23 @@
+1.  input:
+abcdefghijklmnopabcdefghijklmnopabcdefghijklmnopabcdefghijklmnop
+encrypted:
+110100001010101000001101100001101000001000000011011000101100010110010000000100101000011001111111010001011110011101111001
+101001111000111011101101100011110110001110100011000111000110111110100101110010011111110001111011001011111000110110011000
+010101001000100010001110111011011000111101100011101000110001110001101111101001011100100111111100011110110010111110001101
+100110000101010010001000100011101110110110001111011000111010001100011100011011111010010111001001111111000111101100101111
+10001101100110000101010010001000
+decrypted:
+abcdefghijklmnopabcdefghijklmnopabcdefghijklmnopabcdefghijklmnop
+
+2.  changedBit:
+abcdefghijklmnopn%V���h��z�h�c��n%V���h��z�h�c��n%V���h��z�h�c��
+3.  duplicatedBlock:
+abcdefghijklmnopabcdefghijklmnopabcdefghijklmnopabcdefghijklmnopabcdefghijklmnop
+4.  removedBlock:
+abcdefghijklmnopabcdefghijklmnopabcdefghijklmnop
+5.  swappedBlocks:
+�Jؗn�)#!�)$��Tabcdefghijklmnopabcdefghijklmnopabcdefghijklmnop
+6.  swappedBytes:
+abcdefghijklmnop]���rt`A�l����]���rt`A�l����]���rt`A�l����
+7.  deletedByte:
+error

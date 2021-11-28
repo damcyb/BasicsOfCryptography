@@ -1,27 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="blockCiphers.PbcCipherTest" tests="7" skipped="0" failures="1" errors="0" timestamp="2021-11-21T12:05:08" hostname="MBP-FliCom" time="0.093">
-  <properties/>
-  <testcase name="swapping target bits in encrypted message()" classname="blockCiphers.PbcCipherTest" time="0.058"/>
-  <testcase name="deleting whole block from encrypted message()" classname="blockCiphers.PbcCipherTest" time="0.005"/>
-  <testcase name="changing target bite in encrypted message()" classname="blockCiphers.PbcCipherTest" time="0.004"/>
-  <testcase name="plain text after pbc encryption and decryption should be the same()" classname="blockCiphers.PbcCipherTest" time="0.008"/>
-  <testcase name="swapping blocks in encrypted message()" classname="blockCiphers.PbcCipherTest" time="0.003"/>
-  <testcase name="deleting byte in block in encrypted message()" classname="blockCiphers.PbcCipherTest" time="0.005">
-    <failure message="javax.crypto.IllegalBlockSizeException: Input length not multiple of 16 bytes" type="javax.crypto.IllegalBlockSizeException">javax.crypto.IllegalBlockSizeException: Input length not multiple of 16 bytes
-	at java.base/com.sun.crypto.provider.CipherCore.finalNoPadding(CipherCore.java:1109)
-	at java.base/com.sun.crypto.provider.CipherCore.fillOutputBuffer(CipherCore.java:1053)
-	at java.base/com.sun.crypto.provider.CipherCore.doFinal(CipherCore.java:853)
-	at java.base/com.sun.crypto.provider.AESCipher.engineDoFinal(AESCipher.java:446)
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - AssignedCipherTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>AssignedCipherTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/blockCiphers.html">blockCiphers</a> &gt; AssignedCipherTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.060s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="measure execution time()"></a>
+<h3 class="failures">measure execution time()</h3>
+<span class="code">
+<pre>javax.crypto.IllegalBlockSizeException: Data must not be longer than 128 bytes
+	at java.base/com.sun.crypto.provider.RSACipher.doFinal(RSACipher.java:347)
+	at java.base/com.sun.crypto.provider.RSACipher.engineDoFinal(RSACipher.java:392)
 	at java.base/javax.crypto.Cipher.doFinal(Cipher.java:2208)
-	at blockCiphers.EcbCipher.decryptWithIv(EcbCipher.kt:54)
-	at blockCiphers.PbcCipher$decrypt$1.invoke(PbcCipher.kt:33)
-	at blockCiphers.PbcCipher$decrypt$1.invoke(PbcCipher.kt:32)
-	at kotlin.text.StringsKt__AppendableKt.appendElement(Appendable.kt:85)
-	at kotlin.collections.CollectionsKt___CollectionsKt.joinTo(_Collections.kt:3344)
-	at kotlin.collections.CollectionsKt___CollectionsKt.joinToString(_Collections.kt:3361)
-	at kotlin.collections.CollectionsKt___CollectionsKt.joinToString$default(_Collections.kt:3360)
-	at blockCiphers.PbcCipher.decrypt(PbcCipher.kt:32)
-	at blockCiphers.PbcCipherTest.deleting byte in block in encrypted message(PbcCipherTest.kt:77)
+	at blockCiphers.AssignedCipher.encryptAsymmetric(AssignedCipher.kt:53)
+	at blockCiphers.AssignedCipher.encrypt(AssignedCipher.kt:30)
+	at blockCiphers.AssignedCipherTest.doExperimentWithTargetAlgorithmAndText(AssignedCipherTest.kt:57)
+	at blockCiphers.AssignedCipherTest.measure execution time(AssignedCipherTest.kt:51)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,9 +174,95 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-</failure>
-  </testcase>
-  <testcase name="duplicating block in encrypted message()" classname="blockCiphers.PbcCipherTest" time="0.005"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">measure execution time()</td>
+<td class="failures">0.060s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Current mode: AES/ECB/PKCS5Padding, file length 119: 
+Encryption time: 2479737 nanoseconds
+Decryption time: 184966 nanoseconds
+---------------------------
+Current mode: AES/ECB/PKCS5Padding, file length 5118: 
+Encryption time: 1576548 nanoseconds
+Decryption time: 712662 nanoseconds
+---------------------------
+Current mode: AES/ECB/PKCS5Padding, file length 15356: 
+Encryption time: 1206138 nanoseconds
+Decryption time: 1866808 nanoseconds
+---------------------------
+Current mode: AES/CBC/PKCS5Padding, file length 119: 
+Encryption time: 352926 nanoseconds
+Decryption time: 238382 nanoseconds
+---------------------------
+Current mode: AES/CBC/PKCS5Padding, file length 5118: 
+Encryption time: 770659 nanoseconds
+Decryption time: 844499 nanoseconds
+---------------------------
+Current mode: AES/CBC/PKCS5Padding, file length 15356: 
+Encryption time: 2217660 nanoseconds
+Decryption time: 2253948 nanoseconds
+---------------------------
+Current mode: DES/ECB/PKCS5Padding, file length 119: 
+Encryption time: 1013781 nanoseconds
+Decryption time: 187904 nanoseconds
+---------------------------
+Current mode: DES/ECB/PKCS5Padding, file length 5118: 
+Encryption time: 1814389 nanoseconds
+Decryption time: 945748 nanoseconds
+---------------------------
+Current mode: DES/ECB/PKCS5Padding, file length 15356: 
+Encryption time: 1117051 nanoseconds
+Decryption time: 1245320 nanoseconds
+---------------------------
+Current mode: DES/CBC/PKCS5Padding, file length 119: 
+Encryption time: 211904 nanoseconds
+Decryption time: 221035 nanoseconds
+---------------------------
+Current mode: DES/CBC/PKCS5Padding, file length 5118: 
+Encryption time: 1077641 nanoseconds
+Decryption time: 807380 nanoseconds
+---------------------------
+Current mode: DES/CBC/PKCS5Padding, file length 15356: 
+Encryption time: 2162282 nanoseconds
+Decryption time: 1379908 nanoseconds
+---------------------------
+Current mode: RSA/ECB/NoPadding, file length 119: 
+Encryption time: 1471976 nanoseconds
+Decryption time: 2980615 nanoseconds
+---------------------------
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.1</a> at 27 lis 2021, 23:20:13</p>
+</div>
+</div>
+</body>
+</html>
